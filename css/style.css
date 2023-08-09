@@ -30,6 +30,10 @@
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
+.main-idea {
+    font-size: 2rem !important;
+    color: #0099cb;
+}
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
