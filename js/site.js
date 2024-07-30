@@ -1,67 +1,85 @@
-"use strict";
-
-$(document).ready(function () {
-	/* Video Lightbox */
-	if (!!$.prototype.simpleLightboxVideo) {
-		$('.video').simpleLightboxVideo();
-	}
-
-	/*ScrollUp*/
-	if (!!$.prototype.scrollUp) {
-		$.scrollUp();
-	}
-
-	/*Responsive Navigation*/
-	$("#nav-mobile").html($("#nav-main").html());
-	$("#nav-trigger span").on("click",function() {
-		if ($("nav#nav-mobile ul").hasClass("expanded")) {
-			$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-			$(this).removeClass("open");
-		} else {
-			$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-			$(this).addClass("open");
-		}
-	});
-
-	$("#nav-mobile").html($("#nav-main").html());
-	$("#nav-mobile ul a").on("click",function() {
-		if ($("nav#nav-mobile ul").hasClass("expanded")) {
-			$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-			$("#nav-trigger span").removeClass("open");
-		}
-	});
-
-	/* Sticky Navigation */
-	if (!!$.prototype.stickyNavbar) {
-		$('#header').stickyNavbar();
-	}
-
-	$('#content').waypoint(function (direction) {
-		if (direction === 'down') {
-			$('#header').addClass('nav-solid fadeInDown');
-		}
-		else {
-			$('#header').removeClass('nav-solid fadeInDown');
-		}
-	});
-
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
 
+// Active nav link
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-/* Preloader and animations */
-$(window).load(function () { // makes sure the whole site is loaded
-	$('#status').fadeOut(); // will first fade out the loading animation
-	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	$('body').delay(350).css({'overflow-y': 'visible'});
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
 
-	/* WOW Elements */
-	if (typeof WOW == 'function') {
-		new WOW().init();
-	}
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").slice(1) === current) {
+      link.classList.add("active");
+    }
+  });
+});
 
-	/* Parallax Effects */
-	if (!!$.prototype.enllax) {
-		$(window).enllax();
-	}
+// Modal functionality
+const modal = document.getElementById("signupModal");
+const btn = document.getElementById("getStartedBtn");
+const span = document.getElementsByClassName("close")[0];
 
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Form submission
+document.getElementById("signup-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Thank you for signing up! We'll keep you updated on our launch.");
+  this.reset();
+  modal.style.display = "none";
+});
+
+// Footer animation
+const footerSections = document.querySelectorAll(".footer-section");
+footerSections.forEach((section, index) => {
+  section.style.animationDelay = `${index * 0.1}s`;
+});
+
+// Intersection Observer for FAQ items
+const faqItems = document.querySelectorAll(".faq-item");
+const faqObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+faqItems.forEach((item) => {
+  item.style.opacity = 0;
+  item.style.transform = "translateY(20px)";
+  item.style.transition = "opacity 0.5s, transform 0.5s";
+  faqObserver.observe(item);
 });

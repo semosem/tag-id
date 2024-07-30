@@ -11,7 +11,8 @@
     <meta name="description" content="" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no" />
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
 
     <!--Favicon-->
     <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
@@ -32,295 +33,166 @@
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
       rel="stylesheet"
-      type="text/css" />
+      type="text/css"
+    />
   </head>
   <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="status" class="la-ball-triangle-path">
-        <div></div>
-        <div></div>
-        <div></div>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#home" class="logo">TAGID</a>
+        <nav>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+        </nav>
       </div>
     </div>
-    <!--End of Preloader-->
+  </header>
 
-    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
-      <div
-        class="top-border wow fadeInDown animated"
-        style="visibility: visible; animation-name: fadeInDown"></div>
-      <div
-        class="right-border wow fadeInRight animated"
-        style="visibility: visible; animation-name: fadeInRight"></div>
-      <div
-        class="bottom-border wow fadeInUp animated"
-        style="visibility: visible; animation-name: fadeInUp"></div>
-      <div
-        class="left-border wow fadeInLeft animated"
-        style="visibility: visible; animation-name: fadeInLeft"></div>
-    </div>
+  <main>
+    <section id="home">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>Seamless & Secure E-Identification</h1>
+            <div class="subtitle">Empowering your digital identity management</div>
+            <p>We let you easily grant and request e-identification. Streamline the process of granting and requesting electronic identification specifically tailored for the services of your choice. Experience a hassle-free way to manage permissions and access.</p>
+            <button class="cta-button" id="getStartedBtn">Get Started</button>
+          </div>
+          <div class="hero-image">
+            <svg width="300" height="300" viewBox="0 0 300 300">
+              <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#00a0e3;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#00d1b2;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <circle cx="150" cy="150" r="145" fill="url(#grad)"/>
+              <path d="M150,30 A120,120 0 0 1 270,150 L150,150 Z" fill="#fff" opacity="0.2"/>
+              <rect x="100" y="100" width="100" height="150" rx="10" fill="#fff"/>
+              <circle cx="150" cy="90" r="30" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure Authentication</h3>
+            <p>Our multi-factor authentication ensures your digital identity remains protected at all times.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Instant Verification</h3>
+            <p>Experience lightning-fast identity verification for seamless online transactions.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Privacy-First Approach</h3>
+            <p>We prioritize your data privacy, giving you full control over your personal information and how it's shared.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="wrapper">
-      <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
-        <div id="header" class="nav-collapse">
-          <div class="row clearfix">
-            <div class="col-1">
-              <!--Logo-->
-              <div id="logo">
-                <!--Logo that is shown on the banner-->
-                <img
-                  src="images/logo.png"
-                  id="banner-logo"
-                  alt="Landing Page" />
-                <!--End of Banner Logo-->
-
-                <!--The Logo that is shown on the sticky Navigation Bar-->
-                <img
-                  src="images/logo-2.png"
-                  id="navigation-logo"
-                  alt="Landing Page" />
-                <!--End of Navigation Logo-->
-              </div>
-              <!--End of Logo-->
-
-              <aside>
-                <!--Social Icons in Header-->
-                <ul class="social-icons">
-                  <li>
-                    <a
-                      target="_blank"
-                      title="LinkedIn"
-                      href="https://www.linkedin.com/company/tagidentity/about/">
-                      <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      title="Facebook"
-                      href="https://www.facebook.com/people/Tagidentity/100095364883951/">
-                      <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      title="Twitter"
-                      href="https://twitter.com/tagidentity">
-                      <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      title="Instagram"
-                      href="https://instagram.com/tagidentity?igshid=MjEwN2IyYWYwYw==">
-                      <i class="fa fa-instagram fa-1x"></i
-                      ><span>Instagram</span>
-                    </a>
-                  </li>
-                </ul>
-                <!--End of Social Icons in Header-->
-              </aside>
-
-              <!--Main Navigation-->
-              <nav id="nav-main">
-                <ul>
-                  <li>
-                    <a href="#banner">Home</a>
-                  </li>
-                  <li>
-                    <a href="#about">About</a>
-                  </li>
-                  <!-- <li>
-                    <a href="#services">Services</a>
-                  </li>
-                  <li>
-                    <a href="#clients">Clients</a>
-                  </li>
-                  <li>
-                    <a href="#pricing">Pricing</a>
-                  </li> -->
-                </ul>
-              </nav>
-              <!--End of Main Navigation-->
-
-              <div id="nav-trigger"><span></span></div>
-              <nav id="nav-mobile"></nav>
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>About TAGID</h2>
+          <p>TAGID was founded with a mission to revolutionize digital identity management. Our team of experts in cybersecurity, blockchain technology, and user experience design have come together to create a cutting-edge e-identification solution that prioritizes both security and ease of use.</p>
+          <p>We believe that everyone deserves a secure and seamless digital identity experience. That's why we've developed TAGID to be accessible to individuals and businesses alike, providing robust protection against identity theft and fraud while streamlining online interactions.</p>
+          <h3>Our Team</h3>
+          <div class="team-members">
+            <div class="team-member">
+              <img src="https://websim.example.com/images/ceo.jpg" alt="Sarah Johnson, CEO" width="150" height="150">
+              <h4>Sarah Johnson</h4>
+              <p>CEO</p>
+            </div>
+            <div class="team-member">
+              <img src="https://websim.example.com/images/cto.jpg" alt="Michael Chen, CTO" width="150" height="150">
+              <h4>Michael Chen</h4>
+              <p>CTO</p>
+            </div>
+            <div class="team-member">
+              <img src="https://websim.example.com/images/coo.jpg" alt="Emily Rodriguez, COO" width="150" height="150">
+              <h4>Emily Rodriguez</h4>
+              <p>COO</p>
             </div>
           </div>
         </div>
-        <!--End of Header-->
+      </div>
+    </section>
 
-        <!--Banner Content-->
-        <div id="banner-content" class="row clearfix">
-          <div class="col-38">
-            <div class="section-heading">
-              <h1>
-                SEAMLESS & SECURE <br /><span class="main-idea"
-                  >E-IDENTIFICATION
-                </span>
-              </h1>
-              <h2>
-                Discover the power of Tag ID e-identification, where
-                individuals, companies, and organizations can easily delegate
-                authority to trusted representatives.
-              </h2>
-            </div>
-
-            <!--Call to Action-->
-            <a href="#" class="button">WE WILL BE LIVE SOON</a>
-            <!--End Call to Action-->
-          </div>
+    <section id="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>What is e-identification?</h3>
+          <p>E-identification is a digital process that allows individuals to prove their identity online securely and efficiently.</p>
         </div>
-        <!--End of Row-->
-      </header>
+        <div class="faq-item">
+          <h3>How secure is TAGID?</h3>
+          <p>TAGID employs state-of-the-art encryption and multi-factor authentication to ensure the highest level of security for your digital identity.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can businesses use TAGID?</h3>
+          <p>Yes, TAGID offers tailored solutions for businesses to manage customer identities and enhance their digital security infrastructure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <!--Main Content Area-->
-      <main id="content">
-        <!--Introduction-->
-        <section id="about" class="introduction scrollto">
-          <div class="row clearfix">
-            <div class="col-3">
-              <div class="section-heading">
-                <h3>TAD-ID</h3>
-                <h2 class="section-title">
-                  We let you easily grant and request <br />
-                  e-identification
-                </h2>
-                <p class="section-subtitle">
-                  Streamline the process of granting and requesting electronic
-                  identification specifically tailored for the services of your
-                  choice. Experience a hassle-free way to manage permissions and
-                  access.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-2-3">
-              <!--Icon Block-->
-              <div
-                class="col-2 icon-block icon-top wow fadeInUp"
-                data-wow-delay="0.1s">
-                <!--Icon-->
-                <div class="icon">
-                  <i class="fa fa-id-card fa-2x"></i>
-                </div>
-                <!--Icon Block Description-->
-                <div class="icon-block-description">
-                  <h4>Reliable &amp; Trustworthy</h4>
-                  <p>
-                    Effortlessly manage access permissions and ensure the
-                    security of your digital assets.
-                  </p>
-                </div>
-              </div>
-              <!--End of Icon Block-->
-
-              <!--Icon Block-->
-              <div
-                class="col-2 icon-block icon-top wow fadeInUp"
-                data-wow-delay="0.3s">
-                <!--Icon-->
-                <div class="icon">
-                  <i class="fa fa-bolt fa-2x"></i>
-                </div>
-                <!--Icon Block Description-->
-                <div class="icon-block-description">
-                  <h4>Easy to Use</h4>
-                  <p>
-                    Discover a straightforward and easy to use solution that
-                    ensures both resilient and strong security.
-                  </p>
-                </div>
-              </div>
-              <!--End of Icon Block-->
-
-              <!--Icon Block-->
-              <div
-                class="col-2 icon-block icon-top wow fadeInUp"
-                data-wow-delay="0.5s">
-                <!--Icon-->
-                <div class="icon">
-                  <i class="fa fa-tablet fa-2x"></i>
-                </div>
-                <!--Icon Block Description-->
-                <div class="icon-block-description">
-                  <h4>Multidevice Usage</h4>
-                  <p>
-                    Control authorization levels, careful delegation, and
-                    maintain a secure digital environment from any device.
-                  </p>
-                </div>
-              </div>
-              <!--End of Icon Block-->
-            </div>
-          </div>
-        </section>
-        <!--End of Introduction-->
-
-        <!--End of Pricing Tables-->
-      </main>
-      <!--End Main Content Area-->
-
-      <!--Footer-->
-      <footer id="landing-footer" class="clearfix">
-        <div class="row clearfix">
-          <p id="copyright" class="col-2">Made with love</p>
-
-          <!--Social Icons in Footer-->
-          <ul class="col-2 social-icons">
-            <li>
-              <a
-                target="_blank"
-                title="LinkedIn"
-                href="https://www.linkedin.com/company/tagidentity/about/">
-                <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                title="Facebook"
-                href="https://www.facebook.com/people/Tagidentity/100095364883951/">
-                <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                title="Twitter"
-                href="https://twitter.com/tagidentity">
-                <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                title="Instagram"
-                href="https://instagram.com/tagidentity?igshid=MjEwN2IyYWYwYw==">
-                <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
-              </a>
-            </li>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TAGID</h3>
+          <p>Empowering your digital identity management with cutting-edge e-identification solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
           </ul>
-          <!--End of Social Icons in Footer-->
         </div>
-      </footer>
-      <!--End of Footer-->
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@tagid.com</p>
+          <p>Phone: +1 (555) 123-4567</p>
+          <p>Address: 123 Tech Street, San Francisco, CA 94105</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://twitter.com/tagid" target="_blank">Twitter</a>
+            <a href="https://facebook.com/tagid" target="_blank">Facebook</a>
+            <a href="https://linkedin.com/company/tagid" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TAGIDENTITY. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Include JavaScript resources -->
-    <script src="js/jquery.1.8.3.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/featherlight.min.js"></script>
-    <script src="js/featherlight.gallery.min.js"></script>
-    <script src="js/jquery.enllax.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.stickyNavbar.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/images-loaded.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script src="js/site.js"></script>
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Get Started with TAGID</h2>
+      <p>Sign up to receive updates about our launch and early access opportunities.</p>
+      <form id="signup-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <button type="submit" class="cta-button">Sign Up</button>
+      </form>
+    </div>
+  </div>
+    <script src="js/site.js" />
   </body>
 </html>
