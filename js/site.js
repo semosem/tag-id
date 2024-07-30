@@ -52,6 +52,7 @@ window.onclick = function (event) {
 // Form submission
 document.getElementById("signup-form").addEventListener("submit", function (e) {
   e.preventDefault();
+  console.log("Form submission");
   alert("Thank you for signing up! We'll keep you updated on our launch.");
   this.reset();
   modal.style.display = "none";
