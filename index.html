@@ -272,17 +272,29 @@
 
     <div id="signupModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Get Started with TAGID</h2>
-        <p>
+        <div class="modal-header">
+          <h2 class="modal-title">Get Started with TAG-IDENTITY</h2>
+          <button class="close-button">&times;</button>
+        </div>
+        <p class="description">
           Sign up to receive updates about our launch and early access
           opportunities.
         </p>
-        <form id="signup-form">
+        <div class="tabs">
+          <div class="tab active" data-tab="individual">Individual</div>
+          <div class="tab" data-tab="corporate">Corporate</div>
+        </div>
+        <div class="form-content active" id="individual-form">
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email Address" required />
-          <button type="submit" class="cta-button">Sign Up</button>
-        </form>
+          <button class="sign-up-button">SIGN UP</button>
+        </div>
+        <div class="form-content" id="corporate-form">
+          <input type="text" placeholder="Company Name" required />
+          <input type="text" placeholder="Contact Person" required />
+          <input type="email" placeholder="Corporate Email" required />
+          <button class="sign-up-button">SIGN UP</button>
+        </div>
       </div>
     </div>
     <script src="js/site.js"></script>

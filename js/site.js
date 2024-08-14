@@ -31,16 +31,14 @@ window.addEventListener("scroll", () => {
 });
 
 // Modal functionality
+const tabs = document.querySelectorAll(".tab");
+const forms = document.querySelectorAll(".form-content");
+const closeButton = document.querySelector(".close-button");
 const modal = document.getElementById("signupModal");
 const btn = document.getElementById("getStartedBtn");
-const span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-span.onclick = function () {
-  modal.style.display = "none";
+  modal.style.display = "flex";
 };
 
 window.onclick = function (event) {
@@ -49,13 +47,46 @@ window.onclick = function (event) {
   }
 };
 
-// Form submission
-document.getElementById("signup-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  console.log("Form submission");
-  alert("Thank you for signing up! We'll keep you updated on our launch.");
-  this.reset();
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const tabId = tab.getAttribute("data-tab");
+
+    tabs.forEach((t) => t.classList.remove("active"));
+    forms.forEach((f) => f.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(`${tabId}-form`).classList.add("active");
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  // In a real scenario, this would close the modal
   modal.style.display = "none";
+});
+
+document.querySelectorAll(".sign-up-button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const form = e.target.closest(".form-content");
+    const inputs = form.querySelectorAll("input");
+    let isValid = true;
+
+    inputs.forEach((input) => {
+      if (!input.value.trim()) {
+        isValid = false;
+        input.style.border = "1px solid red";
+      } else {
+        input.style.border = "1px solid #ddd";
+      }
+    });
+
+    if (isValid) {
+      alert("Form submitted successfully!");
+      // Here you would typically send the data to your server
+    } else {
+      alert("Please fill in all fields.");
+    }
+  });
 });
 
 // Footer animation
