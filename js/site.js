@@ -37,7 +37,11 @@ const closeButton = document.querySelector(".close-button");
 const modal = document.getElementById("signupModal");
 const btn = document.getElementById("getStartedBtn");
 
+console.log(btn);
+
 btn.onclick = function () {
+  console.log("signup modal");
+
   modal.style.display = "flex";
 };
 
@@ -93,25 +97,4 @@ document.querySelectorAll(".sign-up-button").forEach((button) => {
 const footerSections = document.querySelectorAll(".footer-section");
 footerSections.forEach((section, index) => {
   section.style.animationDelay = `${index * 0.1}s`;
-});
-
-// Intersection Observer for FAQ items
-const faqItems = document.querySelectorAll(".faq-item");
-const faqObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-
-faqItems.forEach((item) => {
-  item.style.opacity = 0;
-  item.style.transform = "translateY(20px)";
-  item.style.transition = "opacity 0.5s, transform 0.5s";
-  faqObserver.observe(item);
 });
