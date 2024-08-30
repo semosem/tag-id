@@ -45,6 +45,12 @@ nav {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-transform: uppercase; /* Ensures uppercase for a bold look */
+  transition: color 0.3s ease, transform 0.3s ease-in-out; /* Adds smooth transition and transform */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Pop-out effect on hover */
 }
 
 .nav-links {
@@ -56,11 +62,14 @@ nav {
   text-decoration: none;
   margin-left: 30px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  text-transform: uppercase; /* Ensures uppercase for consistency */
+  font-size: 1.1rem; /* Slightly increase font size for better visibility */
+  transition: color 0.3s ease, transform 0.3s ease-in-out; /* Adds smooth transition and transform */
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
+  transform: scale(1.1); /* Pop-out effect on hover */
 }
 
 .hero {
