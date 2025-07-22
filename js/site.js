@@ -8,7 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Active nav link
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
